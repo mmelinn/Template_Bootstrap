@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            margin-top: 100px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Our Website</h1>
-        <p>This is a simple welcome page.</p>
-        <a href="home.html" class="btn">Enter</a>
-    </div>
+    <header>
+        <div class="container">
+            <h1>portofolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="portofolio.html">portofolio</a></li>
+                    <li><a href="contact.html">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Selamat Datang di Portofolio saya</h2>
+            <p>Temukan Karya-karya terbaru saya di sini</p>
+            <p>Nama : {{$nama}}</p>
+            <p>Mata Kuliah :</p>
+            <ul>
+                @foreach ($mapel as $mp)
+                <li>
+                    {{$mp}}
+                </li>
+                @endforeach
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Other selection for retured projects, testimonials, ect, -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 portofolio. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

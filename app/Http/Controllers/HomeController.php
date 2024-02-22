@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        return view('home');
+        $nama = 'Luffy D Monkey';
+        return view('home', ['nama'=> $nama]);
+    }
+    public function biodata(){
+        $nama = 'Luffy D Monkey';
+        $mapel = ['Kualitas perangkat lunak', 'Mobile', 'Web'];
+        return view('home', ['nama' => $nama, 'mapel' => $mapel]);
     }
 }

@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home',[HomeController::class, 'index']);
+Route::get('biodata',[HomeController::class, 'biodata']);
+Route::get('input', [App\Http\Controllers\InputController::class, 'viewPostData']);
+Route::post('input', [App\Http\Controllers\InputController::class, 'processPostData']);
+Route::get('getdata', [App\Http\Controllers\GetDataController::class, 'viewGetData']);
