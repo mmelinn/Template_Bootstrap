@@ -25,20 +25,18 @@
         <div class="container">
             <h2>Selamat Datang di Portofolio saya</h2>
             <p>Temukan Karya-karya terbaru saya di sini</p>
-            <p>Nama : {{$nama}}</p>
+            <p>Nama : <?php echo $nama; ?></p>
+            <p>Umur : <?php echo $umur; ?></p>
             <p>Mata Kuliah :</p>
             <ul>
-                @foreach ($mapel as $mp)
-                <li>
-                    {{$mp}}
-                </li>
-                @endforeach
+                <?php foreach ($mapel as $mp): ?>
+                    <li><?php echo $mp; ?></li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </section>
 
-
-    <!-- Other selection for retured projects, testimonials, ect, -->
+    <!-- Other sections for returned projects, testimonials, etc. -->
 
     <footer>
         <div class="container">

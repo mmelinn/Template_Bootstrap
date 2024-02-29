@@ -6,13 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        $nama = 'Luffy D Monkey';
-        return view('home', ['nama'=> $nama]);
-    }
-    public function biodata(){
-        $nama = 'Luffy D Monkey';
-        $mapel = ['Kualitas perangkat lunak', 'Mobile', 'Web'];
-        return view('home', ['nama' => $nama, 'mapel' => $mapel]);
+    public function index()
+    {
+        $nama = "Melinda Naurah Salsabila";
+        $umur = 19;
+        $mapel = ["Laravel", "Flutter"];
+
+        return view('home', compact('nama', 'umur', 'mapel'));
     }
 }
